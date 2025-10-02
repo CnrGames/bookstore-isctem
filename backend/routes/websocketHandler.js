@@ -15,7 +15,8 @@ function handleTextMessage(session_id, speaker_id, original_text, speaker_lang) 
         let finalText = original_text;
         if (speaker_lang !== listener.lang) {
             // TODO: Call your chosen translation API
-            finalText = `(Translated from ${speaker_lang} to ${listener.lang}) ${original_text}`; // Simulated
+            //  finalText = `(Translated from ${speaker_lang} to ${listener.lang}) ${original_text}`; // Simulated
+            //  finalText
         }
 
         const payload = { type: 'translated_message', speaker: speaker_id, text: finalText, lang: listener.lang };
